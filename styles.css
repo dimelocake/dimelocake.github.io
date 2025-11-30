@@ -1,0 +1,139 @@
+/* General Styling */
+body {
+    background-color: #cca6a2c2;
+}
+
+/* Navbar */
+.custom-navbar {
+    background-color: #cca6a2c2; /* translucent tie to #cca6a2 */
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    border-bottom: 1px solid rgba(0,0,0,0.06);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1030;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+}
+
+/* Make brand/links darker for contrast on the light background */
+.navbar-brand,
+.nav-link {
+    color: #2b2b2b !important;
+}
+
+.logo-img {
+    /* subtle blur + keep brightness/control size */
+    filter: blur(2px) brightness(0.95);
+    -webkit-filter: blur(2px) brightness(0.95);
+    transition: filter 180ms ease, transform 180ms ease;
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+/* Toggler styling for visibility on translucent bg */
+.navbar-toggler {
+    border-color: rgba(0,0,0,0.08);
+}
+.navbar-toggler-icon {
+    filter: brightness(0.2) invert(0.02);
+}
+
+/* Hero Section */
+.hero {
+    background: url('foto\ pau.jpg') center/cover no-repeat;
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    padding: 40px;
+    position: relative;
+}
+
+.hero-overlay {
+    background-color: rgba(0,0,0,0.45);
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+/* Services Section */
+.service {
+    margin-bottom: 2rem;
+    background: #ffffff;
+}
+.service-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+/* Services Section background (complements #cca6a2) */
+.services-section {
+    background: url('stock logo.jpg') center/cover no-repeat;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.04);
+}
+
+/* keep cards visually separate inside the services section */
+.services-section .service-card {
+    background: #ffffff;
+}
+
+/* Cards */
+.info-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.info-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+.info-card img {
+    border-radius: 8px;
+}
+
+/* shared card styles for info-card and service-card */
+.info-card,
+.service-card {
+    background: #ffffff;
+    border-radius: 8px;
+    padding: 1rem; 
+    transition: transform 0.28s ease, box-shadow 0.28s ease;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+    border: 1px solid rgba(0,0,0,0.04);
+    color: #222;
+}
+
+.info-card:hover,
+.service-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.10);
+}
+
+/* tighten headings and text inside cards */
+.service-card h2,
+.info-card h2 {
+    margin-bottom: .5rem;
+    font-size: 1.125rem;
+    color: #111;
+}
+
+.service-card p,
+.info-card p {
+    color: #444;
+    margin-bottom: 0.75rem;
+}
